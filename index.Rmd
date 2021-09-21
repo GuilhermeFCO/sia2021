@@ -2,7 +2,7 @@
 title: "Análise Descritiva e Comparativa da Covid-19"
 subtitle: ""
 author: "Guilherme Fernandes Castro de Oliveira"
-institute: "Universidade Federal de Viçosa - Campus UFV Florestal"
+institute: "Universidade Federal de Viçosa - Campus UFV-Florestal"
 date: "`r format(Sys.Date(), '%d/%m/%Y')`"
 output:
   xaringan::moon_reader:
@@ -27,31 +27,15 @@ library(data.table)
 ```{r xaringan-panelset, echo=FALSE}
 xaringanExtra::use_panelset()
 ```
-```{r, include=FALSE}
-df <- fread("data/caso.csv",
-            encoding = "UTF-8")
-
-dfCity <- df %>%
-          filter(place_type == "city") %>% 
-          arrange(city)
-
-
-dfState <- df %>%
-          filter(place_type == "state") %>% 
-          arrange(state)
-
-dfStateLast <- dfState %>% 
-  filter(is_last == TRUE)
-```
 
 class: center, middle
 
 ```{r qrcode, echo=FALSE, out.width='30%'}
-knitr::include_graphics('img/semat2020.png')
+knitr::include_graphics('img/sia2021.png')
 ```
 </div>
 .center[
-[guilhermefco.github.io/semat2020](guilhermefco.github.io/semat2020)
+<a target="_blank" href="https://guilhermefco.github.io/sia2021/">guilhermefco.github.io/sia2021/</a>
 ]
 
 ---
@@ -118,98 +102,46 @@ knitr::include_graphics('img/sarsCoV2.jpg')
 
 <h3>Transmissão</h3>
 
-
 - .justify[
 A transmissão ocorre pelo ar, ou por contato pessoal, através de secreções contaminadas.
 ]
  
 - .justify[
-Devido ao modo de transmissão vários lugares do mundo decretaram isolamento social visto que até o momento não há medicamento para o combate e enfrentamento da doença.
+Devido ao modo de transmissão vários lugares do mundo decretaram isolamento social com o objetivo de minimizar o número de contaminados.
 ]
   
 **Fonte:** [OMS](https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-how-is-it-transmitted#:~:text=COVID%2D19%20is%20caused%20by,speak%2C%20sing%20or%20breathe%20heavily.)
 
 ---
+class: middle, center, inverse
+
+# Objetivo
+
+---
 # Banco de Dados
 
 .panelset[
-  .panel[.panel-name[Governo Federal]
+  .panel[.panel-name[covidBR]
 .center[
-```{r govCovid, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/govCovid.png')
-```
-]  
-
-**Fonte:** [Governo Federal do Brasil](https://opendatasus.saude.gov.br/dataset/casos-nacionais)
-  ]
-  
-  .panel[.panel-name[Brasil.io]
-.center[
-```{r Brasil.io, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/brasil.io.png')
-```
-]  
-
-**Fonte:** [Brasil.io](https://brasil.io/home/)
-  ]
-  
-  .panel[.panel-name[Jhon Hopkins]
-.center[
-```{r jhData, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/jhData.png')
-```
-]    
-  
-**Fonte:** [Jhon Hopkins University](https://github.com/CSSEGISandData/COVID-19)
-  ]
-]
-
----
-# Dashboards
-
-.panelset[
-  .panel[.panel-name[Governo Federal]
-.center[
-```{r govDashboard, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/govDashboard.png')
+```{r covidBR, echo=FALSE, out.width='75%'}
+knitr::include_graphics('img/covidBR.png')
 ```
 ]
-  
-**Fonte:** [Governo Federal do Brasil](https://covid.saude.gov.br/)
+
+<a href="https://github.com/GuilhermeFCO/covidBR"><i class="fab fa-github" style="font-size:40px;"></i></a>
+
   ]
-  .panel[.panel-name[CoronaBR]
+  .panel[.panel-name[Base de Dados]
 .center[
 ```{r CoronaBR, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/CoronaBR.jpg')
+knitr::include_graphics('img/dataBaseCovid19.png')
 ```
 ]
 
-**Fonte:** [CoronaBR](https://github.com/fsbmat-ufv/CoronaBR)
-  ]
-  .panel[.panel-name[OMS]
-.center[
-```{r omsDashboard, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/omsDashboard.png')
-```
-] 
+<a href="https://github.com/GuilhermeFCO/dataBaseCovid19"><i class="fab fa-github" style="font-size:40px;"></i></a>
 
-**Fonte:** [OMS](https://covid19.who.int/)
-  ]
-  .panel[.panel-name[Jhon Hopkins]
-.center[
-```{r jhDashboard, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/jhDashboard.png')
-```
-]
-  
-**Fonte:** [Jhon Hopkins University](https://coronavirus.jhu.edu/map.html)
   ]
 ]
-
----
-class: middle, center, inverse
-
-# Objetivos
 
 ---
 # Gráficos
@@ -217,68 +149,68 @@ class: middle, center, inverse
 .panelset[
   .panel[.panel-name[1]
 .center[
-```{r, echo=FALSE, fig.width= 7, fig.height= 5, fig.retina=3}
-dfState %>%
-  filter(state == "MG") %>%
-  ggplot(aes(x = date,
-             y = confirmed)
-  ) +
-  geom_line(color = "#0786db", lwd = 1.2) +
-  xlab("Data") +
-  ylab("Número de Casos Confirmados") +
-  ggtitle('Gráfico de linhas do número de casos confirmados no estado de Minas Gerais')
+``` {r mapa, echo=FALSE, out.width='75%'}
+  knitr::include_graphics('img/mapa.png')
 ```
 ]
   ]
   .panel[.panel-name[2]
   .center[
-```{r, echo=FALSE, fig.width= 7, fig.height= 5, fig.retina=3}
-dfState %>%
-  filter(state == "MG") %>%
-  ggplot(aes(x = date,
-             y = deaths)
-  ) +
-  geom_line(color = "#0786db", lwd = 1.2) +
-  xlab("Data") +
-  ylab("Número de Óbitos") +
-  ggtitle('Gráfico de linhas do número de óbitos no estado de Minas Gerais')
+``` {r barra, echo=FALSE, out.width='75%'}
+  knitr::include_graphics('img/barra.png')
 ```
 ]
   ]
   .panel[.panel-name[3]
 .center[
-```{r, echo=FALSE, fig.width=7, fig.height= 5, fig.retina=3}
-dfState %>% 
-  filter(is_last == TRUE) %>%
-  top_n(n = 10, confirmed) %>% 
-  ggplot(aes(x = reorder(state, -confirmed), 
-             y = confirmed)) +
-  geom_col(fill = "#0786db", color = "black") +
-  xlab("Estado") +
-  ylab("Número de Casos Confirmados") +
-  ggtitle('Gráfico de barras comparando os 10 maiores números de casos\n confirmados por Estado no Brasil')
+``` {r densidade, echo=FALSE, out.width='75%'}
+  knitr::include_graphics('img/densidade.png')
 ```
-]
-  ]
-  .panel[.panel-name[4]
-.center[
-```{r map, echo=FALSE, out.width='75%'}
-knitr::include_graphics('img/map.png')
-```
+  
 ]
   ]
 ]
 
 ---
-# Shiny
+# Covid-19 Brasil
 
+.panelset[
+  .panel[.panel-name[Inicio]
 .center[
-``` {r shiny, echo=FALSE, out.width='80%'}
-knitr::include_graphics('img/shiny.png')
+``` {r inicio, echo=FALSE, out.width='100%'}
+  knitr::include_graphics('img/inicio.png')
 ```
 ]
-
-Você pode acessar [clicando aqui.](https://guilhermefco.shinyapps.io/CovidInBrazil/)
+  ]
+  .panel[.panel-name[Covid]
+  .center[
+``` {r covid, echo=FALSE, out.width='100%'}
+  knitr::include_graphics('img/covidbrasil.png')
+```
+]
+  ]
+  .panel[.panel-name[IDH]
+.center[
+``` {r idh, echo=FALSE, out.width='100%'}
+  knitr::include_graphics('img/regioesidh.png')
+```
+]
+  ]
+    .panel[.panel-name[Correlação]
+.center[
+``` {r corr, echo=FALSE, out.width='100%'}
+  knitr::include_graphics('img/estadocorr.png')
+```
+]
+  ]
+.panel[.panel-name[Relatório]
+.center[
+``` {r relatorio, echo=FALSE, out.width='100%'}
+  knitr::include_graphics('img/relatorio.png')
+```
+]
+  ]
+]
 
 ---
 # Modelo TCC
@@ -299,8 +231,6 @@ knitr::include_graphics('img/pdf.jpg')
 ]
   ]
 ]
-
-Será lançado em breve. `r emo::ji("smile")`
 
 ---
 class: center, middle

@@ -4,14 +4,15 @@
     <title>Análise Descritiva e Comparativa da Covid-19</title>
     <meta charset="utf-8" />
     <meta name="author" content="Guilherme Fernandes Castro de Oliveira" />
+    <script src="libs/header-attrs-2.11.1/header-attrs.js"></script>
     <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
-    <link href="libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.2.4/panelset.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
     <link rel="shortcut icon" href="favicon.png?" type="image/png">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="style\semat.css" type="text/css" />
-    <link rel="stylesheet" href="style\default-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/semat.css" type="text/css" />
+    <link rel="stylesheet" href="style/default-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -19,8 +20,8 @@ class: center, middle, inverse, title-slide
 
 # Análise Descritiva e Comparativa da Covid-19
 ### Guilherme Fernandes Castro de Oliveira
-### Universidade Federal de Viçosa - Campus UFV Florestal
-### 20/11/2020
+### Universidade Federal de Viçosa - Campus UFV-Florestal
+### 21/09/2021
 
 ---
 
@@ -28,13 +29,12 @@ class: center, middle, inverse, title-slide
 
 
 
-
 class: center, middle
 
-&lt;img src="img/semat2020.png" width="30%" /&gt;
+&lt;img src="img/sia2021.png" width="30%" /&gt;
 &lt;/div&gt;
 .center[
-[guilhermefco.github.io/semat2020](guilhermefco.github.io/semat2020)
+&lt;a target="_blank" href="https://guilhermefco.github.io/sia2021/"&gt;guilhermefco.github.io/sia2021/&lt;/a&gt;
 ]
 
 ---
@@ -95,84 +95,42 @@ Professor Doutor Fernando de Souza Bastos
 
 &lt;h3&gt;Transmissão&lt;/h3&gt;
 
-
 - .justify[
 A transmissão ocorre pelo ar, ou por contato pessoal, através de secreções contaminadas.
 ]
  
 - .justify[
-Devido ao modo de transmissão vários lugares do mundo decretaram isolamento social visto que até o momento não há medicamento para o combate e enfrentamento da doença.
+Devido ao modo de transmissão vários lugares do mundo decretaram isolamento social com o objetivo de minimizar o número de contaminados.
 ]
   
 **Fonte:** [OMS](https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-how-is-it-transmitted#:~:text=COVID%2D19%20is%20caused%20by,speak%2C%20sing%20or%20breathe%20heavily.)
 
 ---
+class: middle, center, inverse
+
+# Objetivo
+
+---
 # Banco de Dados
 
 .panelset[
-  .panel[.panel-name[Governo Federal]
+  .panel[.panel-name[covidBR]
 .center[
-&lt;img src="img/govCovid.png" width="75%" /&gt;
-]  
-
-**Fonte:** [Governo Federal do Brasil](https://opendatasus.saude.gov.br/dataset/casos-nacionais)
-  ]
-  
-  .panel[.panel-name[Brasil.io]
-.center[
-&lt;img src="img/brasil.io.png" width="75%" /&gt;
-]  
-
-**Fonte:** [Brasil.io](https://brasil.io/home/)
-  ]
-  
-  .panel[.panel-name[Jhon Hopkins]
-.center[
-&lt;img src="img/jhData.png" width="75%" /&gt;
-]    
-  
-**Fonte:** [Jhon Hopkins University](https://github.com/CSSEGISandData/COVID-19)
-  ]
+&lt;img src="img/covidBR.png" width="75%" /&gt;
 ]
 
----
-# Dashboards
+&lt;a href="https://github.com/GuilhermeFCO/covidBR"&gt;&lt;i class="fab fa-github" style="font-size:40px;"&gt;&lt;/i&gt;&lt;/a&gt;
 
-.panelset[
-  .panel[.panel-name[Governo Federal]
-.center[
-&lt;img src="img/govDashboard.png" width="75%" /&gt;
-]
-  
-**Fonte:** [Governo Federal do Brasil](https://covid.saude.gov.br/)
   ]
-  .panel[.panel-name[CoronaBR]
+  .panel[.panel-name[Base de Dados]
 .center[
-&lt;img src="img/CoronaBR.jpg" width="75%" /&gt;
+&lt;img src="img/dataBaseCovid19.png" width="75%" /&gt;
 ]
 
-**Fonte:** [CoronaBR](https://github.com/fsbmat-ufv/CoronaBR)
-  ]
-  .panel[.panel-name[OMS]
-.center[
-&lt;img src="img/omsDashboard.png" width="75%" /&gt;
-] 
+&lt;a href="https://github.com/GuilhermeFCO/dataBaseCovid19"&gt;&lt;i class="fab fa-github" style="font-size:40px;"&gt;&lt;/i&gt;&lt;/a&gt;
 
-**Fonte:** [OMS](https://covid19.who.int/)
-  ]
-  .panel[.panel-name[Jhon Hopkins]
-.center[
-&lt;img src="img/jhDashboard.png" width="75%" /&gt;
-]
-  
-**Fonte:** [Jhon Hopkins University](https://coronavirus.jhu.edu/map.html)
   ]
 ]
-
----
-class: middle, center, inverse
-
-# Objetivos
 
 ---
 # Gráficos
@@ -180,34 +138,52 @@ class: middle, center, inverse
 .panelset[
   .panel[.panel-name[1]
 .center[
-&lt;img src="index_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
+&lt;img src="img/mapa.png" width="75%" /&gt;
 ]
   ]
   .panel[.panel-name[2]
   .center[
-&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
+&lt;img src="img/barra.png" width="75%" /&gt;
 ]
   ]
   .panel[.panel-name[3]
 .center[
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
-]
-  ]
-  .panel[.panel-name[4]
-.center[
-&lt;img src="img/map.png" width="75%" /&gt;
+&lt;img src="img/densidade.png" width="75%" /&gt;
+  
 ]
   ]
 ]
 
 ---
-# Shiny
+# Covid-19 Brasil
 
+.panelset[
+  .panel[.panel-name[Inicio]
 .center[
-&lt;img src="img/shiny.png" width="80%" /&gt;
+&lt;img src="img/inicio.png" width="100%" /&gt;
 ]
-
-Você pode acessar [clicando aqui.](https://guilhermefco.shinyapps.io/CovidInBrazil/)
+  ]
+  .panel[.panel-name[Covid]
+  .center[
+&lt;img src="img/covidbrasil.png" width="100%" /&gt;
+]
+  ]
+  .panel[.panel-name[IDH]
+.center[
+&lt;img src="img/regioesidh.png" width="100%" /&gt;
+]
+  ]
+    .panel[.panel-name[Correlação]
+.center[
+&lt;img src="img/estadocorr.png" width="100%" /&gt;
+]
+  ]
+.panel[.panel-name[Relatório]
+.center[
+&lt;img src="img/relatorio.png" width="100%" /&gt;
+]
+  ]
+]
 
 ---
 # Modelo TCC
@@ -224,8 +200,6 @@ Você pode acessar [clicando aqui.](https://guilhermefco.shinyapps.io/CovidInBra
 ]
   ]
 ]
-
-Será lançado em breve. 😄
 
 ---
 class: center, middle

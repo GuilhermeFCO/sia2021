@@ -89,3 +89,7 @@ th, td { padding: 5px; }
     left: 0 !important;
   }
 }
+
+video {
+  border-radius: 50%;
+}
