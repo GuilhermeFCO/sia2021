@@ -196,7 +196,7 @@ knitr::include_graphics('img/dataBaseCovid19.png')
 ```
 ]
   ]
-    .panel[.panel-name[Correlação]
+  .panel[.panel-name[Correlação]
 .center[
 ``` {r corr, echo=FALSE, out.width='100%'}
   knitr::include_graphics('img/estadocorr.png')
@@ -208,6 +208,11 @@ knitr::include_graphics('img/dataBaseCovid19.png')
 ``` {r relatorio, echo=FALSE, out.width='100%'}
   knitr::include_graphics('img/relatorio.png')
 ```
+]
+  ]
+.panel[.panel-name[.]
+.center[
+<a target="_blank" href="https://guilhermefco.github.io/covid19brasil/">guilhermefco.github.io/covid19brasil/</a>
 ]
   ]
 ]
